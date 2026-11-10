@@ -1,1 +1,0 @@
-(function(root){'use strict';root.LOCALE_CONFIG=Object.freeze({locale:'en-AU',language:'en',region:'XX',currency:Object.freeze({code:'USD',symbol:'$',name:'Trip Currency'}),timeZone:'UTC',dateFormat:'DD/MM/YYYY',timeFormat:'24h',numberFormat:'en-AU',distanceUnit:'km',temperatureUnit:'C',weekStart:'Monday'});})(globalThis);

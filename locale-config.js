@@ -1,0 +1,1 @@
+(function(r){"use strict";r.LOCALE_CONFIG=Object.freeze({"locale":"zh-HK","language":"zh-HK","region":"KR","currency":{"code":"KRW","symbol":"₩","name":"KRW"},"timeZone":"Asia/Seoul","dateFormat":"DD/MM/YYYY","timeFormat":"24h","numberFormat":"en-AU","distanceUnit":"km","temperatureUnit":"C","weekStart":"Monday"});})(globalThis);
