@@ -1,5 +1,5 @@
 /* Travel Engine 26.0.0 — typed-cache and offline image integrity. */
-const CACHE='companion-mero-family-seoul-2027-2610-7d2e247e2c96-0b99462f157a';
+const CACHE='companion-mero-family-seoul-2027-2611-7d2e247e2c96-184a42e102b8';
 const SHELL=['./','./index.html','./styles.css','./icon-192.png','./icon-512.png','./trip-logo.png?v=7d2e247e2c96'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
