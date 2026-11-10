@@ -37,8 +37,14 @@
     const section=document.createElement('section');
     section.id='completeTripControl';
     section.className='complete-trip-control';
-    section.innerHTML='<div class="trip-studio-copy"><strong id="completeTripTitle">Complete Trip</strong><small id="completeTripHelp">Lock editing and unlock post-trip outputs.</small></div><button id="completeTripButton" type="button" class="complete-trip-btn">Complete Trip</button>';
+    section.innerHTML='<div class="trip-studio-copy"><span id="automaticTripDates">Trip dates: Automatic by dates</span><strong id="completeTripTitle">Complete Trip</strong><small id="completeTripHelp">Lock editing and unlock your Memory Book link.</small></div><button id="completeTripButton" type="button" class="complete-trip-btn">Complete Trip</button>';
     host.appendChild(section);
+    const dateLabel=section.querySelector('#automaticTripDates');
+    if(dateLabel){const a=TRIP_CONFIG.startDate,b=TRIP_CONFIG.endDate;
+      const today=new Date().toLocaleDateString('en-CA',{timeZone:TRIP_CONFIG.timeZone||'UTC'});
+      const stage=today<a?'Upcoming':today>b?'Past dates':'In trip';
+      dateLabel.textContent='Automatic by dates · '+stage;
+    }
   }
   function updateLifecycleControl(){
     let control=document.getElementById('completeTripControl');
@@ -63,7 +69,7 @@
       button.onclick=window.reopenTrip;
     }else{
       if(title) title.textContent='Complete Trip';
-      if(help) help.textContent='Lock editing and unlock post-trip outputs.';
+      if(help) help.textContent='Lock editing and unlock your Memory Book link.';
       button.textContent='Complete Trip';
       button.classList.remove('reopen-trip-btn');
       button.onclick=window.completeTrip;

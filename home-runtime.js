@@ -74,9 +74,7 @@
   const isWithin=currentDate>=startDate && currentDate<=confirmedEnd;
   const day=isWithin && typeof window.tripDayNumber==='function' ? window.tripDayNumber() : (isBefore?1:maxDay);
   const button=document.getElementById('homeTodayButton');
-  if(button && TRIP_CONFIG.archive && TRIP_CONFIG.archive.enabled && !isBefore && !isWithin){
-    button.href=TRIP_CONFIG.archive.memoryUrl;button.textContent='📖 Our Memories';button.target='_blank';button.rel='noopener noreferrer';
-  } else if(button){
+  if(button){
     button.href=NAVIGATION.build('day',{query:{day}});
     button.textContent=isWithin?`Let's go · Day ${day}`:(isBefore?`Let's go · Day 1`:`Open Day ${day}`);
   }

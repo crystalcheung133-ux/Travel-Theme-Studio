@@ -281,7 +281,7 @@
           <button type="button" class="trip-studio-close" aria-label="Close Trip Studio">×</button>
         </header>
         <div id="tripStudioManagement" class="trip-studio-group" hidden>
-          <p class="trip-studio-label">TRIP MANAGEMENT</p>
+          <p class="trip-studio-label">TRIP STATUS</p>
         </div>
         <div id="tripStudioExports" class="trip-studio-group" hidden>
           <p class="trip-studio-label">EXPORT CENTRE</p>
