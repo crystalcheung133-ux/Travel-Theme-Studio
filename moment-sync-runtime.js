@@ -9,7 +9,7 @@
   const bucket=config.storage?.momentsBucket||'trip-moments';
   const EVENTS=Object.freeze({status:'travelengine:momentsyncstatus',changed:'travelengine:momentsyncchanged'});
   const TOMBSTONE_KEY='travel_engine_moment_tombstones_v1';
-  const META_KEY='travel_engine_moment_sync_meta_v1';
+  const META_KEY=(root.TRIP_CONFIG?.isolatedLocalStorage ? root.TRIP_CONFIG.storageNamespace+':' : '')+'travel_engine_moment_sync_meta_v1';
   const DB_NAME='travel_engine_moment_photos_v1';
   const STORE='pending_photos';
   const state={status:'idle',message:'Saved on this device',lastSyncAt:null,error:null,timer:null,inFlight:null,paused:false};

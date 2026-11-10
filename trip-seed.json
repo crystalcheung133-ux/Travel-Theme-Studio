@@ -33,8 +33,8 @@
       "name": "QQ"
     }
   ],
-  "tagline": "Four of us · Nine days · One Korea adventure",
-  "heroLine1": "Seoul Family",
+  "tagline": "Four of us · Nine winter days · Seoul & Yongpyong",
+  "heroLine1": "Seoul Winter",
   "heroEmphasis": "Companion",
   "memoryBookUrl": "",
   "days": [
@@ -860,5 +860,7 @@
       "heroMeadow": "#F4F1FA",
       "heroSun": "#FFF8F1"
     }
-  }
+  },
+  "navLabel": "Mero Family Companion",
+  "isolatedLocalStorage": true
 }

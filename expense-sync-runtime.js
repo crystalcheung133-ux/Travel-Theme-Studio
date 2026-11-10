@@ -8,7 +8,7 @@
   const storage=root.STORAGE?.local;
   const EVENTS=Object.freeze({status:'travelengine:expensesyncstatus',changed:'travelengine:expensesyncchanged'});
   const TOMBSTONE_KEY='travel_engine_expense_tombstones_v1';
-  const META_KEY='travel_engine_expense_sync_meta_v1';
+  const META_KEY=(root.TRIP_CONFIG?.isolatedLocalStorage ? root.TRIP_CONFIG.storageNamespace+':' : '')+'travel_engine_expense_sync_meta_v1';
   const table=config.tables?.expenses||'trip_expenses';
   const state={status:'idle',message:'Saved on this device',lastSyncAt:null,error:null,timer:null,inFlight:null,paused:false};
 

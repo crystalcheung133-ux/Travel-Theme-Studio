@@ -3,8 +3,8 @@
    shared expenses created by another family once. No push service required. */
 (function(root){
   'use strict';
-  const PREFIX='travel_engine_expense_notice_seen_v1:';
-  const INIT_PREFIX='travel_engine_expense_notice_init_v1:';
+  const PREFIX=(root.TRIP_CONFIG?.isolatedLocalStorage ? root.TRIP_CONFIG.storageNamespace+':' : '')+'travel_engine_expense_notice_seen_v1:';
+  const INIT_PREFIX=(root.TRIP_CONFIG?.isolatedLocalStorage ? root.TRIP_CONFIG.storageNamespace+':' : '')+'travel_engine_expense_notice_init_v1:';
   let timer=null;
 
   function family(){
